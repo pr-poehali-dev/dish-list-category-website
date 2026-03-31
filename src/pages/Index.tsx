@@ -163,8 +163,8 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-oswald text-2xl font-bold tracking-wider">
-            <span className="text-gradient">TOKYO</span>
-            <span className="text-foreground/80 ml-1">NIGHT</span>
+            <span className="text-gradient">БУМ</span>
+            <span className="text-foreground/80 ml-1">ПИЦЦА</span>
           </div>
 
           <nav className="hidden md:flex gap-1">
@@ -390,12 +390,12 @@ export default function Index() {
                 {[
                   { icon: "Award", label: "6 лет опыта", sub: "На рынке с 2018 года" },
                   { icon: "ChefHat", label: "Шеф-повара", sub: "Стажировка в Японии" },
-                  { icon: "Flame", label: "Свежие продукты", sub: "Ежедневные поставки" },
-                  { icon: "Star", label: "4.9 рейтинг", sub: "Более 3000 отзывов" },
+                  { icon: "Flame" as const, label: "Свежие продукты", sub: "Ежедневные поставки" },
+                  { icon: "Star" as const, label: "4.9 рейтинг", sub: "Более 3000 отзывов" },
                 ].map(f => (
                   <div key={f.label} className="flex gap-3 items-start">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name={f.icon as any} size={18} className="text-primary" />
+                      <Icon name={f.icon} size={18} className="text-primary" />
                     </div>
                     <div>
                       <div className="font-oswald font-semibold text-foreground text-sm">{f.label}</div>
@@ -430,13 +430,13 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: "Clock", title: "Время доставки", text: "От 30 до 60 минут в зависимости от района города", accent: "30–60 мин" },
-              { icon: "Truck", title: "Бесплатная доставка", text: "При заказе от 1000 рублей доставка бесплатная", accent: "от 1000 ₽" },
-              { icon: "MapPin", title: "Зона доставки", text: "Доставляем по всему городу и в пригородные районы", accent: "Весь город" },
+              { icon: "Clock" as const, title: "Время доставки", text: "От 30 до 60 минут в зависимости от района города", accent: "30–60 мин" },
+              { icon: "Truck" as const, title: "Бесплатная доставка", text: "При заказе от 1000 рублей доставка бесплатная", accent: "от 1000 ₽" },
+              { icon: "MapPin" as const, title: "Зона доставки", text: "Доставляем по всему городу и в пригородные районы", accent: "Весь город" },
             ].map(card => (
               <div key={card.title} className="bg-card border border-border rounded-xl p-6 text-center card-hover">
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={card.icon as any} size={24} className="text-primary" />
+                  <Icon name={card.icon} size={24} className="text-primary" />
                 </div>
                 <div className="font-oswald text-2xl font-bold text-primary mb-2">{card.accent}</div>
                 <h3 className="font-oswald text-lg font-semibold text-foreground mb-2">{card.title}</h3>
@@ -477,13 +477,13 @@ export default function Index() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-10">
             {[
-              { icon: "Phone", title: "Телефон", lines: ["+7 (999) 123-45-67", "+7 (999) 765-43-21"], sub: "Принимаем заказы по телефону" },
-              { icon: "MapPin", title: "Адрес", lines: ["ул. Тёмная, д. 1"], sub: "Пн–Вс 10:00–23:00 · Самовывоз" },
-              { icon: "Clock", title: "Часы работы", lines: ["Пн–Пт: 10:00 – 23:00", "Сб–Вс: 11:00 – 00:00"], sub: "Заказы принимаем до закрытия" },
+              { icon: "Phone" as const, title: "Телефон", lines: ["+7 (999) 123-45-67", "+7 (999) 765-43-21"], sub: "Принимаем заказы по телефону" },
+              { icon: "MapPin" as const, title: "Адрес", lines: ["ул. Тёмная, д. 1"], sub: "Пн–Вс 10:00–23:00 · Самовывоз" },
+              { icon: "Clock" as const, title: "Часы работы", lines: ["Пн–Пт: 10:00 – 23:00", "Сб–Вс: 11:00 – 00:00"], sub: "Заказы принимаем до закрытия" },
             ].map(c => (
               <div key={c.title} className="bg-background border border-border rounded-xl p-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name={c.icon as any} size={22} className="text-primary" />
+                  <Icon name={c.icon} size={22} className="text-primary" />
                 </div>
                 <h3 className="font-oswald text-xl font-bold text-foreground mb-3">{c.title}</h3>
                 {c.lines.map(l => (
