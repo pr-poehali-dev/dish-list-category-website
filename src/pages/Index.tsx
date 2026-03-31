@@ -233,9 +233,9 @@ export default function Index() {
               Доставка от 30 минут
             </div>
             <h1 className="font-oswald text-6xl md:text-8xl font-bold leading-none tracking-tight mb-6 animate-fade-in stagger-1">
-              <span className="text-gradient">TOKYO</span>
+              <span className="text-gradient">БУМ</span>
               <br />
-              <span className="text-foreground">NIGHT</span>
+              <span className="text-foreground">ПИЦЦА</span>
             </h1>
             <p className="text-foreground/60 text-lg md:text-xl font-golos leading-relaxed mb-10 animate-fade-in stagger-2">
               Пицца, роллы и бургеры с доставкой по городу.<br />
@@ -513,10 +513,10 @@ export default function Index() {
       <footer className="bg-background border-t border-border py-8">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-oswald text-xl font-bold">
-            <span className="text-gradient">TOKYO</span>
-            <span className="text-foreground/50 ml-1">NIGHT</span>
+            <span className="text-gradient">БУМ</span>
+            <span className="text-foreground/50 ml-1">ПИЦЦА</span>
           </div>
-          <p className="text-foreground/30 font-golos text-sm text-center">© 2024 Tokyo Night · Доставка еды по городу</p>
+          <p className="text-foreground/30 font-golos text-sm text-center">© 2024 БУМ Пицца · Доставка еды по городу</p>
           <div className="text-foreground/40 font-golos text-sm">+7 (999) 123-45-67</div>
         </div>
       </footer>
