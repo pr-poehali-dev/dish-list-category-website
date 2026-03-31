@@ -106,7 +106,6 @@ type CartItem = MenuItem & { qty: number };
 const NAV_ITEMS = [
   { id: "menu", label: "Меню" },
   { id: "about", label: "О нас" },
-  { id: "delivery", label: "Доставка" },
   { id: "contacts", label: "Контакты" },
 ];
 
@@ -230,7 +229,7 @@ export default function Index() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 text-primary text-sm font-golos px-4 py-2 rounded-full mb-6 animate-fade-in">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-              Доставка от 30 минут
+              Доставка в течение 1 часа
             </div>
             <h1 className="font-oswald text-6xl md:text-8xl font-bold leading-none tracking-tight mb-6 animate-fade-in stagger-1">
               <span className="text-gradient">БУМ</span>
@@ -249,10 +248,10 @@ export default function Index() {
                 СМОТРЕТЬ МЕНЮ
               </button>
               <button
-                onClick={() => scrollToSection("delivery")}
+                onClick={() => scrollToSection("contacts")}
                 className="bg-white/5 border border-white/15 text-foreground font-oswald tracking-widest px-8 py-4 rounded-lg text-base font-semibold hover:bg-white/10 transition-all"
               >
-                УСЛОВИЯ ДОСТАВКИ
+                КОНТАКТЫ
               </button>
             </div>
 
@@ -260,7 +259,7 @@ export default function Index() {
               {[
                 { val: "7", label: "Категорий блюд" },
                 { val: "30+", label: "Блюд в меню" },
-                { val: "30 мин", label: "Доставка" },
+                { val: "1 час", label: "Доставка" },
               ].map(stat => (
                 <div key={stat.label}>
                   <div className="font-oswald text-4xl font-bold text-primary">{stat.val}</div>
@@ -420,52 +419,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* DELIVERY */}
-      <section id="delivery" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-center">
-            <p className="text-primary font-oswald tracking-widest text-sm mb-2">— ДОСТАВКА</p>
-            <h2 className="font-oswald text-5xl font-bold text-foreground">Условия доставки</h2>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {[
-              { icon: "Clock" as const, title: "Время доставки", text: "От 30 до 60 минут в зависимости от района города", accent: "30–60 мин" },
-              { icon: "Truck" as const, title: "Бесплатная доставка", text: "При заказе от 1000 рублей доставка бесплатная", accent: "от 1000 ₽" },
-              { icon: "MapPin" as const, title: "Зона доставки", text: "Доставляем по всему городу и в пригородные районы", accent: "Весь город" },
-            ].map(card => (
-              <div key={card.title} className="bg-card border border-border rounded-xl p-6 text-center card-hover">
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={card.icon} size={24} className="text-primary" />
-                </div>
-                <div className="font-oswald text-2xl font-bold text-primary mb-2">{card.accent}</div>
-                <h3 className="font-oswald text-lg font-semibold text-foreground mb-2">{card.title}</h3>
-                <p className="text-foreground/50 font-golos text-sm leading-relaxed">{card.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-card border border-border rounded-xl p-8">
-            <h3 className="font-oswald text-2xl font-bold text-foreground mb-6">Стоимость доставки</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              {[
-                { range: "До 1000 ₽", price: "200 ₽", desc: "Стандартная стоимость доставки", free: false },
-                { range: "От 1000 до 2000 ₽", price: "100 ₽", desc: "Сниженная стоимость", free: false },
-                { range: "От 2000 ₽", price: "Бесплатно", desc: "Доставка за наш счёт", free: true },
-                { range: "Самовывоз", price: "0 ₽", desc: "Заберите заказ сами со скидкой 5%", free: true },
-              ].map(row => (
-                <div key={row.range} className={`flex items-center justify-between p-4 rounded-lg border ${row.free ? "border-primary/30 bg-primary/5" : "border-border bg-secondary/50"}`}>
-                  <div>
-                    <div className="font-oswald font-semibold text-foreground text-sm">{row.range}</div>
-                    <div className="text-foreground/50 font-golos text-xs mt-0.5">{row.desc}</div>
-                  </div>
-                  <div className={`font-oswald text-lg font-bold ${row.free ? "text-primary" : "text-foreground"}`}>{row.price}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CONTACTS */}
       <section id="contacts" className="py-20 bg-card border-t border-border">
@@ -477,9 +431,9 @@ export default function Index() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-10">
             {[
-              { icon: "Phone" as const, title: "Телефон", lines: ["+7 (999) 123-45-67", "+7 (999) 765-43-21"], sub: "Принимаем заказы по телефону" },
-              { icon: "MapPin" as const, title: "Адрес", lines: ["ул. Тёмная, д. 1"], sub: "Пн–Вс 10:00–23:00 · Самовывоз" },
-              { icon: "Clock" as const, title: "Часы работы", lines: ["Пн–Пт: 10:00 – 23:00", "Сб–Вс: 11:00 – 00:00"], sub: "Заказы принимаем до закрытия" },
+              { icon: "Phone" as const, title: "Телефон", lines: ["+7 (918) 228-63-63", "+7 (918) 224-63-63"], sub: "Принимаем заказы по телефону" },
+              { icon: "MapPin" as const, title: "Адрес", lines: ["г. Майкоп, ул. Промышленная 28И"], sub: "Пн–Вс 10:00–23:00 · Самовывоз" },
+              { icon: "Clock" as const, title: "Часы работы", lines: ["Пн–Вс: 10:00 – 23:00"], sub: "Заказы принимаем до закрытия" },
             ].map(c => (
               <div key={c.title} className="bg-background border border-border rounded-xl p-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
