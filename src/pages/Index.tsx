@@ -39,7 +39,7 @@ const MENU: Category[] = [
       { id: 2, name: "Пармеджанно", desc: "Пицца с пармезаном и нежной начинкой", price: 580, weight: "", image: PIZZA_IMG },
       { id: 3, name: "Бифф", desc: "Пицца с говядиной и овощами", price: 650, weight: "", image: PIZZA_IMG },
       { id: 4, name: "Цезарь", desc: "Пицца в стиле салата Цезарь с курицей", price: 500, weight: "", image: PIZZA_IMG },
-      { id: 5, name: "Мехико", desc: "Острая пицца с мексиканской начинкой", price: 650, weight: "", image: PIZZA_IMG, hot: true },
+      { id: 5, name: "Мехико", desc: "Пицца с тунцом", price: 650, weight: "", image: PIZZA_IMG },
       { id: 6, name: "Салями", desc: "Классическая пицца с салями", price: 500, weight: "", image: PIZZA_IMG },
       { id: 7, name: "Ветчина и грибы", desc: "Сочная пицца с ветчиной и грибами", price: 580, weight: "", image: PIZZA_IMG },
       { id: 8, name: "Морская", desc: "Пицца с морепродуктами", price: 800, weight: "", image: PIZZA_IMG },
