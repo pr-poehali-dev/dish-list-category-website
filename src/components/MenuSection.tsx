@@ -5,8 +5,8 @@ const SALAD_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-8397
 const SHAWARMA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/1af0d2db-805b-4c04-acc3-3a14700ba39e.jpg";
 const WOK_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/99e47631-7879-428e-87ba-41884de954c5.jpg";
 const SOUP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/57669875-fb74-471d-9c33-4464771b6cb7.jpg";
-const TOM_YAM_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/5c077e97-098b-4cba-a884-8d22c09d781c.jpg";
-const TOM_KHA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/cfac46b6-e31f-43fd-a12a-e94dec1a5ef8.png";
+const TOM_YAM_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/0b136aae-bcf1-4290-aa99-5e33f023262a.jpg";
+const TOM_KHA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/3f04b34a-2481-48cf-976d-1a89189ece60.png";
 const SNACKS_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/8f14ed6d-5cf9-4f47-af1c-522029fb7a0f.jpg";
 const ROLLS_TEMPURA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/0674aefd-3a70-407d-b82e-22023aab2a01.jpg";
 const ROLLS_COLD_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/7420aeaa-d414-41a3-a581-c01ff9aee760.jpg";
@@ -20,6 +20,8 @@ const MAKI_TUNA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-
 const MAKI_CRAB_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/f5f2beb5-250d-4a17-bc9a-7b8ddebea257.jpeg";
 const MAKI_SHRIMP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/6f3646db-1b8e-45ea-8e3c-8140051b66f1.jpg";
 const FILADELFIYA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/65355c59-8fb8-4c64-b351-c1a1e741a31a.jpg";
+const FILADELFIYA_SHRIMP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/17f12f7c-0ab0-4fd9-8b8d-f84ba5cdbd6f.jpg";
+const FILADELFIYA_EEL_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/0cbbe17c-ae91-4e58-af40-9ce82f90e5cb.jpg";
 
 export type MenuItem = {
   id: number;
@@ -170,9 +172,9 @@ export const MENU: Category[] = [
       { id: 74, name: "Калифорния с семгой", desc: "Калифорния с копчёной сёмгой", price: 460, weight: "", image: ROLLS_COLD_IMG },
       { id: 75, name: "Калифорния с тунцом", desc: "Калифорния с тунцом", price: 450, weight: "", image: ROLLS_COLD_IMG },
       { id: 76, name: "Калифорния с крабом", desc: "Классическая Калифорния с крабом", price: 400, weight: "", image: ROLLS_COLD_IMG },
-      { id: 77, name: "Филадельфия с креветкой", desc: "Филадельфия со сливочным сыром и креветкой", price: 470, weight: "", image: FILADELFIYA_IMG },
+      { id: 77, name: "Филадельфия с креветкой", desc: "Филадельфия со сливочным сыром и креветкой", price: 470, weight: "", image: FILADELFIYA_SHRIMP_IMG },
       { id: 78, name: "Филадельфия с лососем", desc: "Классическая Филадельфия с лососем", price: 470, weight: "", image: FILADELFIYA_IMG },
-      { id: 79, name: "Филадельфия с угрём", desc: "Филадельфия с угрём и сливочным сыром", price: 470, weight: "", image: FILADELFIYA_IMG },
+      { id: 79, name: "Филадельфия с угрём", desc: "Филадельфия с угрём и сливочным сыром", price: 470, weight: "", image: FILADELFIYA_EEL_IMG },
 
     ]
   },
