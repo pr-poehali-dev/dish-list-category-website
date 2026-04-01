@@ -433,7 +433,7 @@ export default function Index() {
             {[
               { icon: "Phone" as const, title: "Телефон", lines: ["+7 (918) 228-63-63", "+7 (918) 224-63-63"], sub: "Принимаем заказы по телефону" },
               { icon: "MapPin" as const, title: "Адрес", lines: ["г. Майкоп, ул. Промышленная 28И"], sub: "Пн–Вс 10:00–23:00 · Самовывоз" },
-              { icon: "Clock" as const, title: "Часы работы", lines: ["Пн–Вс: 10:00 – 23:00"], sub: "Заказы принимаем до закрытия" },
+              { icon: "Clock" as const, title: "Часы работы", lines: ["Пн–Вс: 10:00 – 23:00"], sub: "Заказы принимаем с 10:00 до 22:30" },
             ].map(c => (
               <div key={c.title} className="bg-background border border-border rounded-xl p-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
