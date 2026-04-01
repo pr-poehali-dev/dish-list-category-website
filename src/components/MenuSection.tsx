@@ -130,10 +130,10 @@ export const MENU: Category[] = [
     items: [
       { id: 45, name: "Хачапури по-аджарски", desc: "Открытый хачапури с яйцом и сыром", price: 350, weight: "", image: SNACKS_IMG },
       { id: 46, name: "Картофель Фри", desc: "Хрустящий картофель фри", price: 200, weight: "", image: SNACKS_IMG },
-      { id: 47, name: "Сырные палочки (5 шт.)", desc: "Хрустящие сырные палочки в панировке", price: 280, weight: "", image: SNACKS_IMG },
-      { id: 48, name: "Халюжи (2 шт.)", desc: "Жареные сырные лепёшки", price: 220, weight: "", image: SNACKS_IMG },
-      { id: 49, name: "Нагетсы (8 шт.)", desc: "Куриные наггетсы в хрустящей панировке", price: 280, weight: "", image: SNACKS_IMG },
-      { id: 50, name: "Креветки темпура (5 шт.)", desc: "Креветки в нежном кляре темпура", price: 380, weight: "", image: SNACKS_IMG },
+      { id: 47, name: "Сырные палочки (5 шт.)", desc: "Хрустящие сырные палочки в панировке", price: 280, weight: "", image: "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/5ede8570-f675-4e66-b215-0efdb7b0fa85.jpeg" },
+      { id: 48, name: "Халюжи (2 шт.)", desc: "Жареные сырные лепёшки", price: 220, weight: "", image: "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/580f98b7-e27b-433b-9bd3-cd55fb6de9c8.jpg" },
+      { id: 49, name: "Нагетсы (8 шт.)", desc: "Куриные наггетсы в хрустящей панировке", price: 280, weight: "", image: "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/3f6a96ba-7a7e-4467-b0d7-d900b24634dc.jpg" },
+      { id: 50, name: "Креветки темпура (5 шт.)", desc: "Креветки в нежном кляре темпура", price: 380, weight: "", image: "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/013d5b9b-5c64-4eab-9c22-a8062d4bfe30.jpg" },
     ]
   },
   {
