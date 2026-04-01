@@ -22,6 +22,7 @@ const MAKI_SHRIMP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b
 const FILADELFIYA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/65355c59-8fb8-4c64-b351-c1a1e741a31a.jpg";
 const FILADELFIYA_SHRIMP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/17f12f7c-0ab0-4fd9-8b8d-f84ba5cdbd6f.jpg";
 const FILADELFIYA_EEL_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/0cbbe17c-ae91-4e58-af40-9ce82f90e5cb.jpg";
+const AKITA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/8b01e4e6-bf4e-483f-abf3-d8ef8f99164f.png";
 
 export type MenuItem = {
   id: number;
@@ -186,7 +187,7 @@ export const MENU: Category[] = [
     items: [
 
       { id: 82, name: "Тори маки", desc: "Запечённый ролл с курицей", price: 410, weight: "", image: ROLLS_BAKED_IMG },
-      { id: 83, name: "Акита", desc: "Запечённый ролл Акита", price: 440, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 83, name: "Акита", desc: "Запечённый ролл Акита", price: 440, weight: "", image: AKITA_IMG },
       { id: 84, name: "БУМ", desc: "Фирменный запечённый ролл БУМ", price: 440, weight: "", image: ROLLS_BAKED_IMG },
       { id: 85, name: "Миндальный шик", desc: "Запечённый ролл с миндальным акцентом", price: 440, weight: "", image: ROLLS_BAKED_IMG },
       { id: 86, name: "Ойси", desc: "Запечённый ролл Ойси", price: 460, weight: "", image: ROLLS_BAKED_IMG },
