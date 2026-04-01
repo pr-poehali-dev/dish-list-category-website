@@ -1,4 +1,4 @@
-# Auth Service v4
+# Auth Service v5
 import os
 import json
 import hmac

@@ -1,4 +1,4 @@
-// Backend API URLs - will be populated after deployment
+// Backend API URLs
 const BACKEND_URLS = {
   auth: import.meta.env.VITE_AUTH_URL || "",
   admin: import.meta.env.VITE_ADMIN_URL || "",
@@ -13,6 +13,20 @@ export function getAdminUrl() {
 }
 export function getOrdersUrl() {
   return BACKEND_URLS.orders;
+}
+
+// Local admin credentials (used when AUTH_URL is not configured)
+const LOCAL_ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || "";
+const LOCAL_ADMIN_PASSWORD_HASH = import.meta.env.VITE_ADMIN_PASSWORD_HASH || "";
+
+function localJwtCreate(payload: object): string {
+  const header = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }))
+    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  const body = btoa(JSON.stringify(payload))
+    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  // Simple signature placeholder (not cryptographic - for local use only)
+  const sig = btoa("local-auth").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  return `${header}.${body}.${sig}`;
 }
 
 function getToken(): string | null {
@@ -58,12 +72,34 @@ export interface LoginResponse {
 
 export async function login(email: string, password: string): Promise<LoginResponse> {
   const authUrl = getAuthUrl();
-  if (!authUrl) throw new Error("AUTH_URL не настроен");
-  return fetchJson<LoginResponse>(`${authUrl}/login`, {
-    method: "POST",
-    body: JSON.stringify({ email, password }),
-    headers: {},
-  });
+
+  // If backend URL is configured - use it
+  if (authUrl) {
+    return fetchJson<LoginResponse>(`${authUrl}/login`, {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: {},
+    });
+  }
+
+  // Fallback: local auth via env-variables (VITE_ADMIN_EMAIL + VITE_ADMIN_PASSWORD_HASH)
+  if (LOCAL_ADMIN_EMAIL && LOCAL_ADMIN_PASSWORD_HASH) {
+    const { compare } = await import("bcryptjs");
+    if (email.toLowerCase() !== LOCAL_ADMIN_EMAIL.toLowerCase()) {
+      throw new Error("Неверный email или пароль");
+    }
+    const valid = await compare(password, LOCAL_ADMIN_PASSWORD_HASH);
+    if (!valid) throw new Error("Неверный email или пароль");
+
+    const user: AdminUser = { id: 1, email: LOCAL_ADMIN_EMAIL, name: "Admin", role: "superadmin" };
+    const token = localJwtCreate({
+      ...user,
+      exp: Math.floor(Date.now() / 1000) + 7 * 24 * 3600,
+    });
+    return { token, user };
+  }
+
+  throw new Error("AUTH_URL не настроен. Добавьте VITE_AUTH_URL или VITE_ADMIN_EMAIL + VITE_ADMIN_PASSWORD_HASH в настройки.");
 }
 
 export async function verifyToken(): Promise<{ valid: boolean; user: AdminUser }> {
