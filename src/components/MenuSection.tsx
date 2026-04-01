@@ -128,7 +128,7 @@ export const MENU: Category[] = [
     label: "Закуски",
     emoji: "🥢",
     items: [
-      { id: 45, name: "Хачапури по-аджарски", desc: "Открытый хачапури с яйцом и сыром", price: 350, weight: "", image: SNACKS_IMG },
+      { id: 45, name: "Хачапури по-аджарски", desc: "Открытый хачапури с яйцом и сыром", price: 350, weight: "", image: "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/abcf78f1-7895-4d97-94d2-3bd26f77d3f5.jpg" },
       { id: 46, name: "Картофель Фри", desc: "Хрустящий картофель фри", price: 200, weight: "", image: SNACKS_IMG },
       { id: 47, name: "Сырные палочки (5 шт.)", desc: "Хрустящие сырные палочки в панировке", price: 280, weight: "", image: "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/5ede8570-f675-4e66-b215-0efdb7b0fa85.jpeg" },
       { id: 48, name: "Халюжи (2 шт.)", desc: "Жареные сырные лепёшки", price: 220, weight: "", image: "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/580f98b7-e27b-433b-9bd3-cd55fb6de9c8.jpg" },
