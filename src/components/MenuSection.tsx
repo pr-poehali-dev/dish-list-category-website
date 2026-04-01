@@ -5,6 +5,8 @@ const SALAD_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-8397
 const SHAWARMA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/1af0d2db-805b-4c04-acc3-3a14700ba39e.jpg";
 const WOK_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/99e47631-7879-428e-87ba-41884de954c5.jpg";
 const SOUP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/57669875-fb74-471d-9c33-4464771b6cb7.jpg";
+const TOM_YAM_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/5c077e97-098b-4cba-a884-8d22c09d781c.jpg";
+const TOM_KHA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/cfac46b6-e31f-43fd-a12a-e94dec1a5ef8.png";
 const SNACKS_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/8f14ed6d-5cf9-4f47-af1c-522029fb7a0f.jpg";
 const ROLLS_TEMPURA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/0674aefd-3a70-407d-b82e-22023aab2a01.jpg";
 const ROLLS_COLD_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/7420aeaa-d414-41a3-a581-c01ff9aee760.jpg";
@@ -113,8 +115,8 @@ export const MENU: Category[] = [
     label: "Супы",
     emoji: "🍲",
     items: [
-      { id: 43, name: "Том Ям", desc: "Традиционный тайский острый суп с морепродуктами", price: 560, weight: "", image: SOUP_IMG, hot: true },
-      { id: 44, name: "Том Кха", desc: "Нежный тайский суп на кокосовом молоке", price: 440, weight: "", image: SOUP_IMG },
+      { id: 43, name: "Том Ям", desc: "Традиционный тайский острый суп с морепродуктами", price: 560, weight: "", image: TOM_YAM_IMG, hot: true },
+      { id: 44, name: "Том Кха", desc: "Нежный тайский суп на кокосовом молоке", price: 440, weight: "", image: TOM_KHA_IMG },
     ]
   },
   {
