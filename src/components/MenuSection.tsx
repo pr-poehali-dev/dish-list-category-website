@@ -13,6 +13,10 @@ const EBI_HRUST_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-
 const KLASSIKA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/78d4560c-13c6-43eb-8dcb-7613ceae6a57.jpg";
 const TEMPURA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/c20e997c-4530-4749-bb24-9bac88bd7b1f.jpg";
 const MAKI_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/b89942cb-b1ed-48f3-b88b-1e9ce98b2677.jpg";
+const MAKI_CUCUMBER_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/ac5146c7-e22e-4e3b-a6b1-5606ff4023eb.jpg";
+const MAKI_TUNA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/4f033869-605c-41c9-b6b8-c7fe199074a1.jpg";
+const MAKI_CRAB_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/f5f2beb5-250d-4a17-bc9a-7b8ddebea257.jpeg";
+const MAKI_SHRIMP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/6f3646db-1b8e-45ea-8e3c-8140051b66f1.jpg";
 const FILADELFIYA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/bucket/65355c59-8fb8-4c64-b351-c1a1e741a31a.jpg";
 
 export type MenuItem = {
@@ -147,10 +151,10 @@ export const MENU: Category[] = [
       { id: 57, name: "Спайси с креветкой", desc: "Острый ролл с тигровой креветкой", price: 360, weight: "", image: ROLLS_COLD_IMG, hot: true },
       { id: 58, name: "Спайси с лососем", desc: "Острый ролл с лососем", price: 380, weight: "", image: ROLLS_COLD_IMG, hot: true },
       { id: 59, name: "Маки с лососем", desc: "Классический маки с лососем", price: 230, weight: "", image: MAKI_IMG },
-      { id: 60, name: "Маки с креветкой", desc: "Классический маки с креветкой", price: 230, weight: "", image: MAKI_IMG },
-      { id: 61, name: "Маки с тунцом", desc: "Классический маки с тунцом", price: 230, weight: "", image: MAKI_IMG },
-      { id: 62, name: "Маки с крабом", desc: "Классический маки с крабом", price: 230, weight: "", image: MAKI_IMG },
-      { id: 63, name: "Маки с огурцом", desc: "Вегетарианский маки с огурцом", price: 190, weight: "", image: MAKI_IMG },
+      { id: 60, name: "Маки с креветкой", desc: "Классический маки с креветкой", price: 230, weight: "", image: MAKI_SHRIMP_IMG },
+      { id: 61, name: "Маки с тунцом", desc: "Классический маки с тунцом", price: 230, weight: "", image: MAKI_TUNA_IMG },
+      { id: 62, name: "Маки с крабом", desc: "Классический маки с крабом", price: 230, weight: "", image: MAKI_CRAB_IMG },
+      { id: 63, name: "Маки с огурцом", desc: "Вегетарианский маки с огурцом", price: 190, weight: "", image: MAKI_CUCUMBER_IMG },
       { id: 64, name: "Циба", desc: "Фирменный ролл Циба", price: 360, weight: "", image: ROLLS_COLD_IMG },
       { id: 65, name: "Тар-тар тунец", desc: "Ролл с тунцом тар-тар", price: 440, weight: "", image: ROLLS_COLD_IMG },
       { id: 66, name: "УНАГИ", desc: "Ролл с угрём унаги", price: 420, weight: "", image: ROLLS_COLD_IMG },
