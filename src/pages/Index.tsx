@@ -1,9 +1,15 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const PIZZA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/329a1572-ba70-46db-a721-dfb3c5a87388.jpg";
-const ROLLS_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/47e508cd-5823-4879-968a-f45bffcd6329.jpg";
-const SHAWARMA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/811dff3a-987d-4ddd-8633-bf11cb2b1357.jpg";
+const PIZZA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/000adcc1-7517-4b5e-b72b-c1e0c4e0de46.jpg";
+const SALAD_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/7a4ba731-3080-4aa6-9eb0-b7b3666d7b81.jpg";
+const SHAWARMA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/1af0d2db-805b-4c04-acc3-3a14700ba39e.jpg";
+const WOK_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/99e47631-7879-428e-87ba-41884de954c5.jpg";
+const SOUP_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/57669875-fb74-471d-9c33-4464771b6cb7.jpg";
+const SNACKS_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/8f14ed6d-5cf9-4f47-af1c-522029fb7a0f.jpg";
+const ROLLS_TEMPURA_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/0674aefd-3a70-407d-b82e-22023aab2a01.jpg";
+const ROLLS_COLD_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/7420aeaa-d414-41a3-a581-c01ff9aee760.jpg";
+const ROLLS_BAKED_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/83e7ab77-eba7-4bea-be71-fc69e53af61e.jpg";
 
 type MenuItem = {
   id: number;
@@ -52,13 +58,13 @@ const MENU: Category[] = [
     label: "Салаты",
     emoji: "🥗",
     items: [
-      { id: 17, name: "Цезарь с курицей", desc: "Классический салат Цезарь с куриным филе", price: 390, weight: "", image: ROLLS_IMG },
-      { id: 18, name: "Цезарь с креветками", desc: "Салат Цезарь с тигровыми креветками", price: 490, weight: "", image: ROLLS_IMG },
-      { id: 19, name: "Греческий", desc: "Свежий греческий салат с брынзой", price: 430, weight: "", image: ROLLS_IMG },
-      { id: 20, name: "С хрустящими баклажанами", desc: "Салат с хрустящими жареными баклажанами", price: 380, weight: "", image: ROLLS_IMG },
-      { id: 21, name: "Оливье с курицей", desc: "Традиционный оливье с куриным филе", price: 330, weight: "", image: ROLLS_IMG },
-      { id: 22, name: "Оливье с говяжьей ветчиной", desc: "Оливье с нарезкой говяжьей ветчины", price: 360, weight: "", image: ROLLS_IMG },
-      { id: 23, name: "Оливье с говядиной", desc: "Оливье с отварной говядиной", price: 380, weight: "", image: ROLLS_IMG },
+      { id: 17, name: "Цезарь с курицей", desc: "Классический салат Цезарь с куриным филе", price: 390, weight: "", image: SALAD_IMG },
+      { id: 18, name: "Цезарь с креветками", desc: "Салат Цезарь с тигровыми креветками", price: 490, weight: "", image: SALAD_IMG },
+      { id: 19, name: "Греческий", desc: "Свежий греческий салат с брынзой", price: 430, weight: "", image: SALAD_IMG },
+      { id: 20, name: "С хрустящими баклажанами", desc: "Салат с хрустящими жареными баклажанами", price: 380, weight: "", image: SALAD_IMG },
+      { id: 21, name: "Оливье с курицей", desc: "Традиционный оливье с куриным филе", price: 330, weight: "", image: SALAD_IMG },
+      { id: 22, name: "Оливье с говяжьей ветчиной", desc: "Оливье с нарезкой говяжьей ветчины", price: 360, weight: "", image: SALAD_IMG },
+      { id: 23, name: "Оливье с говядиной", desc: "Оливье с отварной говядиной", price: 380, weight: "", image: SALAD_IMG },
     ]
   },
   {
@@ -86,12 +92,12 @@ const MENU: Category[] = [
     label: "ВОК",
     emoji: "🍜",
     items: [
-      { id: 37, name: "Удон с курицей", desc: "Лапша удон с куриным филе и овощами", price: 420, weight: "", image: SHAWARMA_IMG },
-      { id: 38, name: "Удон с говядиной", desc: "Лапша удон с сочной говядиной", price: 480, weight: "", image: SHAWARMA_IMG },
-      { id: 39, name: "Удон с креветками", desc: "Лапша удон с тигровыми креветками", price: 460, weight: "", image: SHAWARMA_IMG },
-      { id: 40, name: "Теппан с курицей", desc: "Жареная лапша теппан с курицей", price: 380, weight: "", image: SHAWARMA_IMG },
-      { id: 41, name: "Теппан с говядиной", desc: "Жареная лапша теппан с говядиной", price: 460, weight: "", image: SHAWARMA_IMG },
-      { id: 42, name: "Теппан с креветками", desc: "Жареная лапша теппан с креветками", price: 440, weight: "", image: SHAWARMA_IMG },
+      { id: 37, name: "Удон с курицей", desc: "Лапша удон с куриным филе и овощами", price: 420, weight: "", image: WOK_IMG },
+      { id: 38, name: "Удон с говядиной", desc: "Лапша удон с сочной говядиной", price: 480, weight: "", image: WOK_IMG },
+      { id: 39, name: "Удон с креветками", desc: "Лапша удон с тигровыми креветками", price: 460, weight: "", image: WOK_IMG },
+      { id: 40, name: "Теппан с курицей", desc: "Жареная лапша теппан с курицей", price: 380, weight: "", image: WOK_IMG },
+      { id: 41, name: "Теппан с говядиной", desc: "Жареная лапша теппан с говядиной", price: 460, weight: "", image: WOK_IMG },
+      { id: 42, name: "Теппан с креветками", desc: "Жареная лапша теппан с креветками", price: 440, weight: "", image: WOK_IMG },
     ]
   },
   {
@@ -99,8 +105,8 @@ const MENU: Category[] = [
     label: "Супы",
     emoji: "🍲",
     items: [
-      { id: 43, name: "Том Ям", desc: "Традиционный тайский острый суп с морепродуктами", price: 560, weight: "", image: ROLLS_IMG, hot: true },
-      { id: 44, name: "Том Кха", desc: "Нежный тайский суп на кокосовом молоке", price: 440, weight: "", image: ROLLS_IMG },
+      { id: 43, name: "Том Ям", desc: "Традиционный тайский острый суп с морепродуктами", price: 560, weight: "", image: SOUP_IMG, hot: true },
+      { id: 44, name: "Том Кха", desc: "Нежный тайский суп на кокосовом молоке", price: 440, weight: "", image: SOUP_IMG },
     ]
   },
   {
@@ -108,12 +114,12 @@ const MENU: Category[] = [
     label: "Закуски",
     emoji: "🥢",
     items: [
-      { id: 45, name: "Хачапури по-аджарски", desc: "Открытый хачапури с яйцом и сыром", price: 350, weight: "", image: ROLLS_IMG },
-      { id: 46, name: "Картофель Фри", desc: "Хрустящий картофель фри", price: 200, weight: "", image: ROLLS_IMG },
-      { id: 47, name: "Сырные палочки (5 шт.)", desc: "Хрустящие сырные палочки в панировке", price: 280, weight: "", image: ROLLS_IMG },
-      { id: 48, name: "Халюжи (2 шт.)", desc: "Жареные сырные лепёшки", price: 220, weight: "", image: ROLLS_IMG },
-      { id: 49, name: "Нагетсы (8 шт.)", desc: "Куриные наггетсы в хрустящей панировке", price: 280, weight: "", image: ROLLS_IMG },
-      { id: 50, name: "Креветки темпура (5 шт.)", desc: "Креветки в нежном кляре темпура", price: 380, weight: "", image: ROLLS_IMG },
+      { id: 45, name: "Хачапури по-аджарски", desc: "Открытый хачапури с яйцом и сыром", price: 350, weight: "", image: SNACKS_IMG },
+      { id: 46, name: "Картофель Фри", desc: "Хрустящий картофель фри", price: 200, weight: "", image: SNACKS_IMG },
+      { id: 47, name: "Сырные палочки (5 шт.)", desc: "Хрустящие сырные палочки в панировке", price: 280, weight: "", image: SNACKS_IMG },
+      { id: 48, name: "Халюжи (2 шт.)", desc: "Жареные сырные лепёшки", price: 220, weight: "", image: SNACKS_IMG },
+      { id: 49, name: "Нагетсы (8 шт.)", desc: "Куриные наггетсы в хрустящей панировке", price: 280, weight: "", image: SNACKS_IMG },
+      { id: 50, name: "Креветки темпура (5 шт.)", desc: "Креветки в нежном кляре темпура", price: 380, weight: "", image: SNACKS_IMG },
     ]
   },
   {
@@ -121,11 +127,11 @@ const MENU: Category[] = [
     label: "Роллы темпура",
     emoji: "🔥",
     items: [
-      { id: 51, name: "Краб темпура", desc: "Ролл с крабом в хрустящем кляре темпура", price: 380, weight: "", image: ROLLS_IMG },
-      { id: 52, name: "Лосось темпура", desc: "Ролл с лососем в кляре темпура", price: 440, weight: "", image: ROLLS_IMG },
-      { id: 53, name: "Креветки темпура", desc: "Ролл с креветками в кляре темпура", price: 410, weight: "", image: ROLLS_IMG },
-      { id: 54, name: "Угорь темпура", desc: "Ролл с угрём в кляре темпура", price: 430, weight: "", image: ROLLS_IMG },
-      { id: 55, name: "Краб маки", desc: "Классический маки с крабом", price: 230, weight: "", image: ROLLS_IMG },
+      { id: 51, name: "Краб темпура", desc: "Ролл с крабом в хрустящем кляре темпура", price: 380, weight: "", image: ROLLS_TEMPURA_IMG },
+      { id: 52, name: "Лосось темпура", desc: "Ролл с лососем в кляре темпура", price: 440, weight: "", image: ROLLS_TEMPURA_IMG },
+      { id: 53, name: "Креветки темпура", desc: "Ролл с креветками в кляре темпура", price: 410, weight: "", image: ROLLS_TEMPURA_IMG },
+      { id: 54, name: "Угорь темпура", desc: "Ролл с угрём в кляре темпура", price: 430, weight: "", image: ROLLS_TEMPURA_IMG },
+      { id: 55, name: "Краб маки", desc: "Классический маки с крабом", price: 230, weight: "", image: ROLLS_TEMPURA_IMG },
     ]
   },
   {
@@ -133,31 +139,31 @@ const MENU: Category[] = [
     label: "Холодные роллы",
     emoji: "🍣",
     items: [
-      { id: 56, name: "Взрывной", desc: "Ролл со взрывным острым соусом", price: 380, weight: "", image: ROLLS_IMG, hot: true },
-      { id: 57, name: "Спайси с креветкой", desc: "Острый ролл с тигровой креветкой", price: 360, weight: "", image: ROLLS_IMG, hot: true },
-      { id: 58, name: "Спайси с лососем", desc: "Острый ролл с лососем", price: 380, weight: "", image: ROLLS_IMG, hot: true },
-      { id: 59, name: "Маки с лососем", desc: "Классический маки с лососем", price: 230, weight: "", image: ROLLS_IMG },
-      { id: 60, name: "Маки с креветкой", desc: "Классический маки с креветкой", price: 230, weight: "", image: ROLLS_IMG },
-      { id: 61, name: "Маки с тунцом", desc: "Классический маки с тунцом", price: 230, weight: "", image: ROLLS_IMG },
-      { id: 62, name: "Маки с крабом", desc: "Классический маки с крабом", price: 230, weight: "", image: ROLLS_IMG },
-      { id: 63, name: "Маки с огурцом", desc: "Вегетарианский маки с огурцом", price: 190, weight: "", image: ROLLS_IMG },
-      { id: 64, name: "Циба", desc: "Фирменный ролл Циба", price: 360, weight: "", image: ROLLS_IMG },
-      { id: 65, name: "Тар-тар тунец", desc: "Ролл с тунцом тар-тар", price: 440, weight: "", image: ROLLS_IMG },
-      { id: 66, name: "УНАГИ", desc: "Ролл с угрём унаги", price: 420, weight: "", image: ROLLS_IMG },
-      { id: 67, name: "Эбби хруст", desc: "Хрустящий ролл Эбби", price: 420, weight: "", image: ROLLS_IMG },
-      { id: 68, name: "Блэк стар", desc: "Ролл в чёрном рисе Блэк Стар", price: 420, weight: "", image: ROLLS_IMG },
-      { id: 69, name: "Чикаго", desc: "Фирменный ролл Чикаго", price: 460, weight: "", image: ROLLS_IMG },
-      { id: 70, name: "Оризона", desc: "Ролл Оризона с нежной начинкой", price: 470, weight: "", image: ROLLS_IMG },
-      { id: 71, name: "Калифорния с креветкой", desc: "Классическая Калифорния с тигровой креветкой", price: 440, weight: "", image: ROLLS_IMG },
-      { id: 72, name: "Калифорния с лососем", desc: "Калифорния с нежным лососем", price: 470, weight: "", image: ROLLS_IMG },
-      { id: 73, name: "Калифорния с угрём", desc: "Калифорния с угрём унаги", price: 450, weight: "", image: ROLLS_IMG },
-      { id: 74, name: "Калифорния с семгой", desc: "Калифорния с копчёной сёмгой", price: 460, weight: "", image: ROLLS_IMG },
-      { id: 75, name: "Калифорния с тунцом", desc: "Калифорния с тунцом", price: 450, weight: "", image: ROLLS_IMG },
-      { id: 76, name: "Калифорния с крабом", desc: "Классическая Калифорния с крабом", price: 400, weight: "", image: ROLLS_IMG },
-      { id: 77, name: "Филадельфия с креветкой", desc: "Филадельфия со сливочным сыром и креветкой", price: 470, weight: "", image: ROLLS_IMG },
-      { id: 78, name: "Филадельфия с лососем", desc: "Классическая Филадельфия с лососем", price: 470, weight: "", image: ROLLS_IMG },
-      { id: 79, name: "Филадельфия с угрём", desc: "Филадельфия с угрём и сливочным сыром", price: 470, weight: "", image: ROLLS_IMG },
-      { id: 80, name: "Манхеттен", desc: "Фирменный ролл Манхеттен", price: 440, weight: "", image: ROLLS_IMG },
+      { id: 56, name: "Взрывной", desc: "Ролл со взрывным острым соусом", price: 380, weight: "", image: ROLLS_COLD_IMG, hot: true },
+      { id: 57, name: "Спайси с креветкой", desc: "Острый ролл с тигровой креветкой", price: 360, weight: "", image: ROLLS_COLD_IMG, hot: true },
+      { id: 58, name: "Спайси с лососем", desc: "Острый ролл с лососем", price: 380, weight: "", image: ROLLS_COLD_IMG, hot: true },
+      { id: 59, name: "Маки с лососем", desc: "Классический маки с лососем", price: 230, weight: "", image: ROLLS_COLD_IMG },
+      { id: 60, name: "Маки с креветкой", desc: "Классический маки с креветкой", price: 230, weight: "", image: ROLLS_COLD_IMG },
+      { id: 61, name: "Маки с тунцом", desc: "Классический маки с тунцом", price: 230, weight: "", image: ROLLS_COLD_IMG },
+      { id: 62, name: "Маки с крабом", desc: "Классический маки с крабом", price: 230, weight: "", image: ROLLS_COLD_IMG },
+      { id: 63, name: "Маки с огурцом", desc: "Вегетарианский маки с огурцом", price: 190, weight: "", image: ROLLS_COLD_IMG },
+      { id: 64, name: "Циба", desc: "Фирменный ролл Циба", price: 360, weight: "", image: ROLLS_COLD_IMG },
+      { id: 65, name: "Тар-тар тунец", desc: "Ролл с тунцом тар-тар", price: 440, weight: "", image: ROLLS_COLD_IMG },
+      { id: 66, name: "УНАГИ", desc: "Ролл с угрём унаги", price: 420, weight: "", image: ROLLS_COLD_IMG },
+      { id: 67, name: "Эбби хруст", desc: "Хрустящий ролл Эбби", price: 420, weight: "", image: ROLLS_COLD_IMG },
+      { id: 68, name: "Блэк стар", desc: "Ролл в чёрном рисе Блэк Стар", price: 420, weight: "", image: ROLLS_COLD_IMG },
+      { id: 69, name: "Чикаго", desc: "Фирменный ролл Чикаго", price: 460, weight: "", image: ROLLS_COLD_IMG },
+      { id: 70, name: "Оризона", desc: "Ролл Оризона с нежной начинкой", price: 470, weight: "", image: ROLLS_COLD_IMG },
+      { id: 71, name: "Калифорния с креветкой", desc: "Классическая Калифорния с тигровой креветкой", price: 440, weight: "", image: ROLLS_COLD_IMG },
+      { id: 72, name: "Калифорния с лососем", desc: "Калифорния с нежным лососем", price: 470, weight: "", image: ROLLS_COLD_IMG },
+      { id: 73, name: "Калифорния с угрём", desc: "Калифорния с угрём унаги", price: 450, weight: "", image: ROLLS_COLD_IMG },
+      { id: 74, name: "Калифорния с семгой", desc: "Калифорния с копчёной сёмгой", price: 460, weight: "", image: ROLLS_COLD_IMG },
+      { id: 75, name: "Калифорния с тунцом", desc: "Калифорния с тунцом", price: 450, weight: "", image: ROLLS_COLD_IMG },
+      { id: 76, name: "Калифорния с крабом", desc: "Классическая Калифорния с крабом", price: 400, weight: "", image: ROLLS_COLD_IMG },
+      { id: 77, name: "Филадельфия с креветкой", desc: "Филадельфия со сливочным сыром и креветкой", price: 470, weight: "", image: ROLLS_COLD_IMG },
+      { id: 78, name: "Филадельфия с лососем", desc: "Классическая Филадельфия с лососем", price: 470, weight: "", image: ROLLS_COLD_IMG },
+      { id: 79, name: "Филадельфия с угрём", desc: "Филадельфия с угрём и сливочным сыром", price: 470, weight: "", image: ROLLS_COLD_IMG },
+      { id: 80, name: "Манхеттен", desc: "Фирменный ролл Манхеттен", price: 440, weight: "", image: ROLLS_COLD_IMG },
     ]
   },
   {
@@ -165,18 +171,18 @@ const MENU: Category[] = [
     label: "Запечённые роллы",
     emoji: "⭐",
     items: [
-      { id: 81, name: "Сапори", desc: "Запечённый ролл Сапори", price: 410, weight: "", image: ROLLS_IMG },
-      { id: 82, name: "Тори маки", desc: "Запечённый ролл с курицей", price: 410, weight: "", image: ROLLS_IMG },
-      { id: 83, name: "Акито", desc: "Запечённый ролл Акито", price: 440, weight: "", image: ROLLS_IMG },
-      { id: 84, name: "БУМ", desc: "Фирменный запечённый ролл БУМ", price: 440, weight: "", image: ROLLS_IMG },
-      { id: 85, name: "Миндальный шик", desc: "Запечённый ролл с миндальным акцентом", price: 440, weight: "", image: ROLLS_IMG },
-      { id: 86, name: "Ойси", desc: "Запечённый ролл Ойси", price: 460, weight: "", image: ROLLS_IMG },
-      { id: 87, name: "Классика с лососем", desc: "Классический запечённый ролл с лососем", price: 460, weight: "", image: ROLLS_IMG },
-      { id: 88, name: "Классика с креветкой", desc: "Классический запечённый ролл с креветкой", price: 470, weight: "", image: ROLLS_IMG },
-      { id: 89, name: "Классика с мидиями", desc: "Классический запечённый ролл с мидиями", price: 420, weight: "", image: ROLLS_IMG },
-      { id: 90, name: "Эби чиз", desc: "Запечённый ролл с креветкой и сыром", price: 380, weight: "", image: ROLLS_IMG },
-      { id: 91, name: "Изыска", desc: "Изысканный запечённый ролл", price: 440, weight: "", image: ROLLS_IMG },
-      { id: 92, name: "Бомбовый", desc: "Бомбовый запечённый ролл", price: 430, weight: "", image: ROLLS_IMG },
+      { id: 81, name: "Сапори", desc: "Запечённый ролл Сапори", price: 410, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 82, name: "Тори маки", desc: "Запечённый ролл с курицей", price: 410, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 83, name: "Акита", desc: "Запечённый ролл Акита", price: 440, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 84, name: "БУМ", desc: "Фирменный запечённый ролл БУМ", price: 440, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 85, name: "Миндальный шик", desc: "Запечённый ролл с миндальным акцентом", price: 440, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 86, name: "Ойси", desc: "Запечённый ролл Ойси", price: 460, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 87, name: "Классика с лососем", desc: "Классический запечённый ролл с лососем", price: 460, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 88, name: "Классика с креветкой", desc: "Классический запечённый ролл с креветкой", price: 470, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 89, name: "Классика с мидиями", desc: "Классический запечённый ролл с мидиями", price: 420, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 90, name: "Эби чиз", desc: "Запечённый ролл с креветкой и сыром", price: 380, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 91, name: "Изыска", desc: "Изысканный запечённый ролл", price: 440, weight: "", image: ROLLS_BAKED_IMG },
+      { id: 92, name: "Бомбовый", desc: "Бомбовый запечённый ролл", price: 430, weight: "", image: ROLLS_BAKED_IMG },
     ]
   },
 ];
