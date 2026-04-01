@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Login with missing credentials",
+      "method": "POST",
+      "path": "/login",
+      "body": {},
+      "expectedStatus": 400
+    },
+    {
+      "name": "Login with wrong credentials",
+      "method": "POST",
+      "path": "/login",
+      "body": { "email": "wrong@test.com", "password": "wrongpassword" },
+      "expectedStatus": 401
+    },
+    {
+      "name": "Verify without token",
+      "method": "POST",
+      "path": "/verify",
+      "body": {},
+      "expectedStatus": 401
+    }
+  ]
+}

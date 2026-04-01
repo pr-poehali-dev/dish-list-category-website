@@ -1,0 +1,11 @@
+{
+  "tests": [
+    {
+      "name": "Create order with missing fields",
+      "method": "POST",
+      "path": "/",
+      "body": { "customer_name": "Test" },
+      "expectedStatus": 400
+    }
+  ]
+}
