@@ -493,7 +493,7 @@ export default function Index() {
 
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={ROLLS_IMG} alt="Наш ресторан" className="w-full h-full object-cover" />
+                <img src={ROLLS_COLD_IMG} alt="Наш ресторан" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground p-5 rounded-xl shadow-2xl">
