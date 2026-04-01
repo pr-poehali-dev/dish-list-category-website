@@ -97,6 +97,7 @@ export const MENU: Category[] = [
       { id: 34, name: "Клаб Курица", desc: "Клаб-сэндвич с куриным филе", price: 450, weight: "", image: SHAWARMA_IMG },
       { id: 35, name: "Клаб Говядина", desc: "Клаб-сэндвич с говядиной", price: 550, weight: "", image: SHAWARMA_IMG },
       { id: 36, name: "Клаб Микс", desc: "Клаб-сэндвич с миксом начинок", price: 500, weight: "", image: SHAWARMA_IMG },
+      { id: 100, name: "Хот дог с курицей", desc: "Сочная куриная сосиска в мягкой булочке со свежими овощами и соусом", price: 280, weight: "", image: SHAWARMA_IMG },
     ]
   },
   {
