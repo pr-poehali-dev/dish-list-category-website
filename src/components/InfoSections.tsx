@@ -1,7 +1,5 @@
 import Icon from "@/components/ui/icon";
 
-const ROLLS_COLD_IMG = "https://cdn.poehali.dev/projects/23eaf61a-ab56-4238-a6b1-83974c0ffea5/files/7420aeaa-d414-41a3-a581-c01ff9aee760.jpg";
-
 type InfoSectionsProps = {
   scrollToSection: (id: string) => void;
 };
@@ -9,49 +7,96 @@ type InfoSectionsProps = {
 export default function InfoSections({ scrollToSection }: InfoSectionsProps) {
   return (
     <>
-      {/* ABOUT */}
-      <section id="about" className="py-20 bg-card border-y border-border">
+      {/* REVIEWS */}
+      <section id="reviews" className="py-20 bg-card border-y border-border">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
-              <p className="text-primary font-oswald tracking-widest text-sm mb-2">— О НАС</p>
-              <h2 className="font-oswald text-5xl font-bold text-foreground mb-6">История<br />ресторана</h2>
-              <p className="text-foreground/60 font-golos text-lg leading-relaxed mb-6">
-                Tokyo Night открылся в 2018 году с одной идеей — объединить лучшее из японской, азиатской кухни и уличного фастфуда под одной крышей.
-              </p>
-              <p className="text-foreground/50 font-golos leading-relaxed mb-8">
-                Наши шефы прошли стажировку в Токио и Сеуле, привезя с собой аутентичные рецепты и технологии. Каждый ролл — это баланс вкуса, текстуры и визуальной эстетики.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                {[
-                  { icon: "Award", label: "6 лет опыта", sub: "На рынке с 2018 года" },
-                  { icon: "ChefHat", label: "Шеф-повара", sub: "Стажировка в Японии" },
-                  { icon: "Flame" as const, label: "Свежие продукты", sub: "Ежедневные поставки" },
-                  { icon: "Star" as const, label: "4.9 рейтинг", sub: "Более 3000 отзывов" },
-                ].map(f => (
-                  <div key={f.label} className="flex gap-3 items-start">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name={f.icon} size={18} className="text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-oswald font-semibold text-foreground text-sm">{f.label}</div>
-                      <div className="text-foreground/50 text-xs font-golos mt-0.5">{f.sub}</div>
-                    </div>
-                  </div>
+              <p className="text-primary font-oswald tracking-widest text-sm mb-2">— ОТЗЫВЫ</p>
+              <h2 className="font-oswald text-5xl font-bold text-foreground">Что говорят<br />наши гости</h2>
+            </div>
+            <div className="flex items-center gap-3 bg-background border border-border rounded-xl px-5 py-3">
+              <div className="flex gap-0.5">
+                {[1,2,3,4,5].map(s => (
+                  <Icon key={s} name="Star" size={18} className="text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
+              <div>
+                <div className="font-oswald text-2xl font-bold text-foreground leading-none">4.9</div>
+                <div className="text-foreground/40 font-golos text-xs">более 3000 отзывов</div>
+              </div>
             </div>
+          </div>
 
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={ROLLS_COLD_IMG} alt="Наш ресторан" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Анна К.",
+                date: "март 2024",
+                rating: 5,
+                text: "Заказываю уже третий раз — всегда свежая пицца, горячая доставка. Тесто тонкое и хрустящее, именно такое как люблю. Рекомендую всем!",
+                dish: "Пицца Маргарита",
+              },
+              {
+                name: "Дмитрий В.",
+                date: "февраль 2024",
+                rating: 5,
+                text: "Лучшая пицца в Майкопе, без вариантов. Привезли быстро, всё горячее. Порции большие, цена адекватная. Буду заказывать ещё!",
+                dish: "Пицца Пепперони",
+              },
+              {
+                name: "Екатерина М.",
+                date: "январь 2024",
+                rating: 5,
+                text: "Очень вкусно! Тесто просто таёт во рту. Служба доставки работает чётко — привезли раньше обещанного времени. Спасибо команде!",
+                dish: "Пицца 4 сыра",
+              },
+              {
+                name: "Михаил Р.",
+                date: "март 2024",
+                rating: 5,
+                text: "Брал на корпоратив несколько пицц — все остались довольны. Большой выбор, хороший сервис. Обязательно обратимся снова.",
+                dish: "Ассорти пицц",
+              },
+              {
+                name: "Ольга С.",
+                date: "февраль 2024",
+                rating: 5,
+                text: "Наконец-то нашла место, где пицца как в Италии! Свежие ингредиенты, щедрая начинка. Дети в восторге, теперь заказываем каждую пятницу.",
+                dish: "Пицца Карбонара",
+              },
+              {
+                name: "Алексей Т.",
+                date: "январь 2024",
+                rating: 5,
+                text: "Быстро, вкусно, недорого. Что ещё нужно? Пицца приехала горячей, упаковка аккуратная. Операторы вежливые. Всё на высшем уровне!",
+                dish: "Пицца BBQ",
+              },
+            ].map((r) => (
+              <div key={r.name} className="bg-background border border-border rounded-xl p-6 flex flex-col gap-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary/15 rounded-full flex items-center justify-center">
+                      <span className="font-oswald font-bold text-primary text-sm">{r.name[0]}</span>
+                    </div>
+                    <div>
+                      <div className="font-oswald font-bold text-foreground text-sm">{r.name}</div>
+                      <div className="text-foreground/40 font-golos text-xs">{r.date}</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-0.5">
+                    {[1,2,3,4,5].map(s => (
+                      <Icon key={s} name="Star" size={14} className={s <= r.rating ? "text-yellow-400 fill-yellow-400" : "text-foreground/20"} />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-foreground/70 font-golos text-sm leading-relaxed flex-1">{r.text}</p>
+                <div className="flex items-center gap-2 pt-2 border-t border-border">
+                  <Icon name="Pizza" size={13} className="text-primary" />
+                  <span className="text-foreground/40 font-golos text-xs">{r.dish}</span>
+                </div>
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground p-5 rounded-xl shadow-2xl">
-                <div className="font-oswald text-3xl font-bold">5000+</div>
-                <div className="text-primary-foreground/80 text-sm font-golos">довольных гостей</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -81,6 +126,24 @@ export default function InfoSections({ scrollToSection }: InfoSectionsProps) {
                 <p className="text-foreground/40 font-golos text-sm mt-3">{c.sub}</p>
               </div>
             ))}
+          </div>
+
+          <div className="bg-background border border-border rounded-xl p-6 mb-8 flex flex-col sm:flex-row items-center gap-5">
+            <a
+              href="https://www.instagram.com/boompizza_mkp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group w-full"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                <Icon name="Instagram" size={22} className="text-white" />
+              </div>
+              <div>
+                <div className="font-oswald text-lg font-bold text-foreground group-hover:text-primary transition-colors">@boompizza_mkp</div>
+                <div className="text-foreground/50 font-golos text-sm">Подписывайтесь на наш Instagram</div>
+              </div>
+              <Icon name="ExternalLink" size={16} className="text-foreground/30 group-hover:text-primary ml-auto transition-colors" />
+            </a>
           </div>
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">

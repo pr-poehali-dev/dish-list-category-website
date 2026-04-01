@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon";
 
 const NAV_ITEMS = [
   { id: "menu", label: "Меню" },
-  { id: "about", label: "О нас" },
+  { id: "reviews", label: "Отзывы" },
   { id: "contacts", label: "Контакты" },
 ];
 
